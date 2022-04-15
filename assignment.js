@@ -86,7 +86,7 @@ console.log('using array[0] will use the first element of the array because the 
 //? Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 
 var nameLengths = [names.length]
-for (let i = 0; i < names.length; i++) {
+for (let i = 0; i < names.length; i++) { //loop add the length of each name to namelengs array
    nameLengths[i] = names[i].length;
    
 }
@@ -99,24 +99,125 @@ for (let i = 0; i < names.length; i++) {
 var sum = 0;
 
 for (let i = 0; i < nameLengths.length; i++) {
-    sum += nameLengths[i];
+    sum += nameLengths[i]; // add everthing in namelengths
     
 }
 
 console.log('sum of all lengths in nameLengths[] = '+ sum)
 
 //!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
-
-        console.log('step 7:) //? Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times.
+console.log('step 7:')
+//? Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
 //? (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
-
 
 function worddupe(word,n) {
 
-    return word.repeat(n)
+    return word.repeat(n);
 
     
 }
 
-console.log(worddupe('hello',3)) 
+console.log(worddupe('hello',3)); 
+//!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+console.log ('step 8:')//? Write a function that takes two parameters, firstName and lastName, and returns a full name (the full name should be the first and the last name separated by a space).
 
+function   fullname(firstName,lastName) {
+    return firstName+' '+lastName
+}
+
+console.log(fullname('Cruz','Garcia'))
+//!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+console.log('step 9:')//? Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+
+function over100(nums) { //this function is going to pull the previous ages array and add them up to return the sum of the number in the ages array
+    
+    let sum=0 
+    
+    for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
+        
+    }
+
+    return sum;
+    
+}
+
+console.log(over100(ages) >= 100) //compares output of function over100 to see if its >= 100 outputing a boolean response
+//!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+console.log('step 10:')//? Write a function that takes an array of numbers and returns the average of all the elements in the array.
+
+var newages=[30,10,25,16,98]
+
+function avgAges(nums) {
+    
+    let sum=0 
+    
+    for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
+        
+    }
+
+    return sum;
+    
+    
+}
+
+console.log(avgAges(newages)/newages.length)
+
+//!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+console.log('step 11')//? Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+
+function agescompare(nums) {
+    
+    let sum=0 
+    
+
+
+    for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
+        
+    }
+  return sum/ nums.length
+    
+    
+}
+console.log(agescompare(newages)>=agescompare(ages)) // i used the same function to find the average of 2 differnt arrays
+
+//!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+console.log('step 12:')//? Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, 
+//? and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+
+isHotOutside= true
+nothot= false
+moneyInPocket = 12.50
+
+function willBuyDrink(hot,cash) {
+    if (hot===true) {
+        if (cash >=10.50) {
+            return true
+        }else{
+            return false
+
+        }
+    }
+    
+}
+
+console.log(willBuyDrink(isHotOutside,moneyInPocket))
+
+//!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+console.log('step 13:')//?Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+
+
+
+amdone=true
+
+function final(done) {
+    done===true
+
+    return done
+    
+}
+
+console.log(final(amdone + ' is done'))

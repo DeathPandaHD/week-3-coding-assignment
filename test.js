@@ -1,11 +1,21 @@
-//? Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
-//? (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
+//? Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, 
+//? and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 
-function worddupe(word,n) {
 
-    return word.repeat(n)
+isHotOutside= true
+nothot= false
+moneyInPocket = 12.50
 
+function willBuyDrink(hot,cash) {
+    if (hot===true) {
+        if (cash >=10.50) {
+            return true
+        }else{
+            return false
+
+        }
+    }
     
 }
 
-console.log(worddupe('hello',3))
+console.log(willBuyDrink(isHotOutside,moneyInPocket))
